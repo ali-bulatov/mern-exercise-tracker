@@ -15,8 +15,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "server": "npm start --prefix backend",
-    "client": "react-scripts start",
+    "server": "npm start --prefix backend -port $PORT",
+    "client": "react-scripts start -port $PORT",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
