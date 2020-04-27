@@ -34,7 +34,7 @@ app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
 // Start the server, start listening on a 5000 port
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log(`Server is running on port: ${PORT}`);
     console.log(process.env.PORT);
 });
