@@ -37,6 +37,9 @@ export default class CreateExercise extends Component {
                     })
                 }
             })
+            .catch((error) => {
+                console.log(error);
+              })
     }
 
     // Set value of username to something enterent in the textbox
@@ -79,7 +82,10 @@ export default class CreateExercise extends Component {
 
         // Send HTTP post request to the backend endpoint that expects json object in body
         axios.post('http://localhost:5000/exercises/add', exercise)
-            .then(res => console.log(res.data));
+            .then(res => console.log(res.data))
+            .catch((error) => {
+                console.log(error);
+              });
 
         // take the person back to the homepage - list of exercises
         window.location = '/';

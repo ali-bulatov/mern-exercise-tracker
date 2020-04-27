@@ -40,7 +40,10 @@ export default class ExercisesList extends Component {
     // delete exercise by id
     deleteExercise(id) {
         axios.delete('http://localhost:5000/exercises/'+id)
-            .then(res => console.log(res.data));
+            .then(res => console.log(res.data))
+            .catch((error) => {
+                console.log(error);
+              });
 
         this.setState({
             // filter array of exercises so it returns everything except deleted item
