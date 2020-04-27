@@ -36,4 +36,5 @@ app.use('/users', usersRouter);
 // Start the server, start listening on a 5000 port
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
+    console.log(process.env.PORT);
 });
